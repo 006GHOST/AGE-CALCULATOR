@@ -151,7 +151,7 @@ body {
     background-color: #386FA4;
     cursor: pointer;
     color: rgb(229, 241, 227);
-    margin: 20px 0px 0px 39px; /* Adjust margin as needed */
+    margin: 20px 0px 0px 39px; 
 }
 
 .startButton:hover {
