@@ -1,11 +1,11 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url(create_an_image_with_plain_cre.jpeg);
     height: 100vh;
     width: 100wh;
@@ -15,8 +15,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-
 
 @keyframes container {
     0% {
@@ -33,35 +31,28 @@ body{
     }
 }
 
-.container1 {   
-    position: center;  
+.container1, .container2 {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;  
     border: 10px double #7ab5e9;
-    background-color:#f5e5d6;
+    background-color: #f5e5d6;
+    border-radius: 30%;
+    animation: container 2s infinite;
+}
+
+.container1 {
     height: 330px;
     width: 495px;
-    border-radius: 30%;
-    animation: container 2s infinite; 
-
 }
-.container2{   
-    position: absolute;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;  
-    border: 10px double #7ab5e9;
-    background-color:#f5e5d6;
+
+.container2 {
     height: 300px;
     width: 460px;
-    border-radius: 30%;
-    animation: container 2s infinite; 
 }
 
-.container1:hover{
+.container1:hover {
     border: 8px dashed #c15d24;
     transition: all 0.1s;
     animation-play-state: paused;
@@ -69,36 +60,43 @@ body{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.data{
+.container2 button {
+    margin-top: -28px; 
+    margin-right: 0px;
+    margin-left:150px;
+    margin-bottom: 0px;
+}
+
+.data {
     position: absolute;
 }
 
-.data h1{
+.data h1 {
     position: relative;
     left: 12px;
-    margin:5px 46px 54px 60px;
+    margin: 5px 46px 54px 60px;
 }
 
-#person{
-    position:relative;
+#person {
+    position: relative;
     top: 26px;
-   font-size: 1.3em;
-   font-weight: 200;
+    font-size: 1.3em;
+    font-weight: 200;
 }
 
-#DOB{
+#DOB {
     position: relative;
     top: 27px;
-     margin: 20px;
-     font-size: 20px;
-     font-weight: 200;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 200;
 }
 
-#dob-input{
+#dob-input {
     cursor: pointer;
 }
 
-#start{
+#start {
     height: 50px;
     width: 150px;
     border: 2px solid black;
@@ -111,43 +109,126 @@ body{
     background-color: #386FA4;
     cursor: pointer;
     color: rgb(229, 241, 227);
-    margin:-31px 0px 0px 39px;
+    margin: -63px 0px 0px 64px;
 }
 
-
-#start:hover{
+#start:hover {
     background-color: #133C55;
     transition-timing-function: ease-in-out;
     color: #f4e73f;
 }
 
-
-
-
-
-
-
-.countdown{
+.countdown {
     position: relative;
     top: -25px;
     left: 3px;
     padding-top: 40px;
     text-align: center;
-    display:flex;
-    justify-content:space-between;
-    margin:0px 17px 0px -65px;
+    display: flex;
+    justify-content: space-between;
+    margin: -27px 17px 0px -65px;
 }
 
+#person.details {
+    margin: -54px 0px 23px 37px;
+}
+
+#DOB.details {
+    margin: -6px 0px 20px 55px;
+}
+
+.time {
+    margin: 0px 6px 0px 0px;
+}
+
+.startButton {
+    height: 50px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 25%;
+    font-weight: bolder;
+    font-size: 1.25em;
+    background-color: #386FA4;
+    cursor: pointer;
+    color: rgb(229, 241, 227);
+    margin: 20px 0px 0px 39px; /* Adjust margin as needed */
+}
+
+.startButton:hover {
+    background-color: #133C55;
+    transition-timing-function: ease-in-out;
+    color: #f4e73f;
+}
+
+@media screen and (max-width: 600px) {
+     .container2 {
+        max-width: 95%;
+        width: 90%;
+    }
+
+    .container1{
+        max-width: 95%;
+        width: 90%;
+    }
+
+    #start{
+        margin:-22px 0px 0px -5px;
+    }
+
+    .data h1{
+        margin:17px 10px 50px 29px;
+        font-size: 26px;
+    }
 #person.details{
-    margin:-54px 0px 23px 37px;
+    margin:-61px 0px 25px 52px;
+}
+.countdown{
+    font-size: 14px;
+    
 }
 
-#DOB.details{
-    margin:-6px 0px 20px 55px;
+.container2 button{
+    margin:-31px 0px 0px 100px;
+}
+.container2{
+    border-radius: 33%;
+}
 }
 
-.time{
-    margin:0px 6px 0px 0px;
+@media screen and (max-width: 380px) {
+    .container2 {
+        max-width: 95%;
+        width: 90%;
+    }
+
+    .container1{
+        max-width: 95%;
+        width: 90%;
+    }
+
+    #start{
+        margin:0px 0px 32px -11px;
+    }
+
+    .data h1{
+        margin:12px 10px 50px 48px;
+        font-size: 22px;
+        
+    }
+#person.details{
+    margin:-44px 0px 20px 60px;
+}
+.countdown{
+    font-size: 9px;
+}
+
+.container2 button{
+    margin:-37px 0px 0px 87px;
+}
+.container2{
+    border-radius: 33%;
+}
+ 
 }
 
 
