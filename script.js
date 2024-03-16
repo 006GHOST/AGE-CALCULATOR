@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const start = document.getElementById('start'); 
-    const start2 = document.getElementById('start2');    
+    const start = document.getElementById('start');
     const container1 = document.querySelector('.container1');
     const container2 = document.querySelector('.container2');
     const yearsSpan = document.getElementById('years');
@@ -8,20 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const daysSpan = document.getElementById('days');
 
     start.addEventListener('click', () => {
-
-        if(userInput.value === "")
-        {
-            alert("please enter your date of birth");
-        }
         container1.style.display = 'none';
         container2.style.display = 'block';
         
-        calculateAge();
+        if (document.getElementById("date").value.trim() !== "") {
+            calculateAge();
+        } 
+        else {
+            alert("Please enter your date of birth.");
+            container1.style.display = 'block';
+            container2.style.display = 'none';
+        }
     });
-
-    
-
-   
 
     function calculateAge() {
         let userInput = document.getElementById("date");
@@ -59,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             y3--;
         }
 
-        
+        // Update the HTML content in the second container using template literals
         container2.innerHTML = `
             <div class="data">
                 <h1> AGE CALCULATOR</h1>
@@ -78,10 +75,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         <p style="font-size: 15px; font-weight: 100;">Days</p>
                     </div>
                 </div>
-                
-        </div>
+                <button id="backButton" class="startButton">Go Back</button>
             </div>
         `;
+
+        const backButton = document.getElementById('backButton');
+        backButton.addEventListener('click', () => {
+            container1.style.display = 'block';
+            container2.style.display = 'none';
+        });
+    
+
     }
 
     function getDaysInMonth(year, month) {
